@@ -1,4 +1,4 @@
-FROM quay.io/xeno-exe/xeno-exe-md:latest
+FROM node:20-alpine
 
 WORKDIR /app
 
@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "start"]
+EXPOSE 3000
+
+CMD ["node", "index.js"]
